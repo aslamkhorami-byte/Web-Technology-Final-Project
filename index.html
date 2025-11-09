@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NewsSite — Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="container header" role="banner">
+  <a href="index.html" class="brand">
+    <div class="logo">
+  <img src="logo.jpg" alt="NewsSite logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
+</div>
+
+    <div>
+      <strong>NewsSite</strong>
+      <div style="font-size:12px;color:var(--muted)">Reliable news, beautifully presented</div>
+    </div>
+  </a>
+  <nav class="nav" role="navigation" aria-label="Main">
+    <a href="index.html" class="active">Home</a>
+    <a href="news.html">News</a>
+    <a href="Videonews.html">Video News</a>
+    <a href="sites.html">Famous Sites</a>
+    <a href="contact.html">Contact</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="login.html">Log In</a>
+    <label class="switch" title="Toggle dark mode">
+      <input class="theme-toggle" type="checkbox"><span class="knob"></span>
+    </label>
+  </nav>
+</header>
+<section id="weather-widget" class="widget" style="margin-top:20px">
+  <h4>Current Weather</h4>
+  <div id="weather-info" style="color:var(--muted)">Loading weather...</div>
+</section>
+<main class="container" role="main">
+  <section class="hero">
+    <img src="header.jpg" alt="News header illustration">
+    <div class="meta">
+      <div class="kicker">Top Story</div>
+      <h1 class="h-title">Daily roundup: what matters today</h1>
+      <p class="h-desc">Curated headlines and in-depth stories made easy. Use the search bar to find articles, filter by category, and save items to your reading list.</p>
+      <div style="margin-top:12px">
+        <a href="news.html" class="btn">Browse News</a>
+        <a href="signup.html" class="btn ghost">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <div style="height:20px"></div>
+
+  <section id="saved-section" style="max-width:var(--max-width);margin:0 auto;padding:0 20px;display:none;">
+    <h2 style="margin-bottom:8px">Saved News</h2>
+    <div id="saved-preview"></div>
+  </section>
+
+  <div class="main-grid">
+    <section aria-labelledby="latest-head">
+      <h2 id="latest-head" style="margin:0 0 12px">Latest</h2>
+      <div class="articles" id="articles-list"></div>
+    </section>
+
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="widget">
+        <h4>Search</h4>
+        <div class="searchbar" role="search">
+          <input id="search-input" placeholder="Search stories, categories..." aria-label="Search stories">
+        </div>
+      </div>
+
+      <div class="widget">
+        <h4>Categories</h4>
+        <select id="cat-filter" aria-label="Filter by category" style="width:100%;padding:10px;border-radius:8px">
+          <option value="all">All</option>
+          <option>World</option>
+          <option>Politics</option>
+          <option>Business</option>
+          <option>Technology</option>
+          <option>Health</option>
+          <option>Sports</option>
+        </select>
+      </div>
+
+      <div class="widget">
+        <h4>Saved</h4>
+        <p style="margin:0;color:var(--muted)">Your reading list is saved in your browser. Try saving an article from the list.</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <small>© 2025 NewsSite — demo project</small>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

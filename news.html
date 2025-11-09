@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>News — NewsSite</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="container header" role="banner">
+  <a href="index.html" class="brand"><div class="logo">
+  <img src="logo.jpg" alt="NewsSite logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
+</div><strong>NewsSite</strong></div></a>
+  <nav class="nav" role="navigation" aria-label="Main">
+    <a href="index.html" class="active">Home</a>
+    <a href="news.html">News</a>
+    <a href="Videonews.html">Video News</a>
+    <a href="sites.html">Famous Sites</a>
+    <a href="contact.html">Contact</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="login.html">Log In</a>
+    <label class="switch" title="Toggle dark mode"><input class="theme-toggle" type="checkbox"><span class="knob"></span></label>
+  </nav>
+</header>
+<main class="container">
+  <h1 style="margin-bottom:10px">News</h1>
+  <div class="main-grid">
+    <section>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <div class="kicker">All stories</div>
+        <div><input id="search-input" placeholder="Search..." aria-label="Search news"></div>
+      </div>
+      <div id="articles-list" class="articles" role="list"></div>
+    </section>
+    <aside class="sidebar" aria-label="Controls">
+      <div class="widget">
+        <h4>Dark Mode</h4>
+        <label class="switch"><input class="theme-toggle" type="checkbox"><span class="knob"></span></label>
+      </div>
+      <div class="widget">
+        <h4>Quick Filters</h4>
+        <button class="btn" onclick="renderArticles(window.articles)">Show All</button>
+        <button class="btn ghost" onclick="(function(){const f=window.articles.filter(a=>a.category==='Science'); renderArticles(f)})()">Science</button>
+      </div>
+    </aside>
+  </div>
+</main>
+<footer><div class="container"><small>© 2025 NewsSite — demo project</small></div></footer>
+<script src="app.js"></script>
+</body>
+</html>

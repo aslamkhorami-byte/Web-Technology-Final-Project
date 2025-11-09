@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NewsSite — News Links</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<style>
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.video-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.video-card .site-preview {
+  width: 100%;
+  display: block;
+  height: 200px;
+  object-fit: cover;
+  background: #f3f4f6;
+}
+
+.video-content {
+  padding: 20px;
+}
+
+.video-title {
+  font-size: 18px;
+  margin: 5px 0 10px;
+  color: #6d28d9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.video-date {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.video-desc {
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.7;
+  min-height: 56px;
+}
+
+.video-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 0 30px 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #64748b;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #7c3aed;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  width: 250px;
+  font-family: "Poppins", sans-serif;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 420px) {
+  .video-card .site-preview { height: 150px; }
+}
+</style>
+</head>
+
+<body>
+<header class="container header" role="banner">
+  <a href="index.html" class="brand">
+    <div class="logo">
+      <img src="logo.jpg" alt="NewsSite logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
+    </div>
+    <div>
+      <strong>NewsSite</strong>
+      <div style="font-size:12px;color:var(--muted)">Reliable news, beautifully presented</div>
+    </div>
+  </a>
+  <nav class="nav" role="navigation" aria-label="Main">
+    <a href="index.html" class="active">Home</a>
+    <a href="news.html">News</a>
+    <a href="Videonews.html">Video News</a>
+    <a href="sites.html">Famous Sites</a>
+    <a href="contact.html">Contact</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="login.html">Log In</a>
+    <label class="switch" title="Toggle dark mode">
+      <input class="theme-toggle" type="checkbox"><span class="knob"></span>
+    </label>
+  </nav>
+</header>
+
+
+<main>
+  <header style="text-align:center;margin:40px 0 30px;">
+    <h1 class="animate__animated animate__fadeInDown">News Sites</h1>
+    
+  </header>
+
+  <section class="video-grid">
+
+    <div class="video-card">
+      <a class="video-link" href="https://www.bbc.com" target="_blank" rel="noopener noreferrer">
+        <img class="site-preview" src="bbc.png" alt="BBC News preview">
+      </a>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-globe"></i> BBC News</div>
+        <div class="video-date">International</div>
+        <div class="video-desc">Global news coverage with in-depth analysis.</div>
+      </div>
+    </div>
+
+
+    <div class="video-card">
+      <a class="video-link" href="https://www.cnn.com" target="_blank" rel="noopener noreferrer">
+        <img class="site-preview" src="cnn.png" alt="CNN preview">
+      </a>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-tv"></i> CNN</div>
+        <div class="video-date">US / World</div>
+        <div class="video-desc">Breaking news and live coverage from the US and around the world.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <a class="video-link" href="https://www.aljazeera.com" target="_blank" rel="noopener noreferrer">
+        <img class="site-preview" src="aljazeera.png" alt="Al Jazeera preview">
+      </a>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-globe-americas"></i> Al Jazeera</div>
+        <div class="video-date">Middle East / Global</div>
+        <div class="video-desc">In-depth reports and analysis from the Middle East and around the world.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <a class="video-link" href="https://www.nytimes.com" target="_blank" rel="noopener noreferrer">
+        <img class="site-preview" src="newyorktimes.png" alt="NY Times preview">
+      </a>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-newspaper"></i> The New York Times</div>
+        <div class="video-date">US / Analysis</div>
+        <div class="video-desc">Comprehensive articles, opinions, and investigative reporting.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <a class="video-link" href="https://www.theguardian.com" target="_blank" rel="noopener noreferrer">
+        <img class="site-preview" src="guardian.png" alt="The Guardian preview">
+      </a>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-pen-nib"></i> The Guardian</div>
+        <div class="video-date">UK / World</div>
+        <div class="video-desc">UK newspaper covering culture, politics, and global news.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <a class="video-link" href="https://www.reuters.com" target="_blank" rel="noopener noreferrer">
+        <img class="site-preview" src="reuters.png" alt="Reuters preview">
+      </a>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-bolt"></i> Reuters</div>
+        <div class="video-date">Wire / Business</div>
+        <div class="video-desc">International news agency with fast, accurate reporting.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <a class="video-link" href="https://www.foxnews.com" target="_blank" rel="noopener noreferrer">
+        <img class="site-preview" src="foxnews.png" alt="Fox News preview">
+      </a>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-broadcast-tower"></i> Fox News</div>
+        <div class="video-date">US / Politics</div>
+        <div class="video-desc">US news, politics, and opinion from Fox News.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <a class="video-link" href="https://www.nbcnews.com" target="_blank" rel="noopener noreferrer">
+        <img class="site-preview" src="nbc.png" alt="NBC News preview">
+      </a>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-tv"></i> NBC News</div>
+        <div class="video-date">US / World</div>
+        <div class="video-desc">Breaking news, analysis, and original reporting by NBC News.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <a class="video-link" href="https://www.bloomberg.com" target="_blank" rel="noopener noreferrer">
+        <img class="site-preview" src="bloomberg.png" alt="Bloomberg preview">
+      </a>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-chart-line"></i> Bloomberg</div>
+        <div class="video-date">Business / Finance</div>
+        <div class="video-desc">Global business, financial news, and market data.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 - All rights reserved for your website.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="newsletter-form">
+    <input type="email" placeholder="Enter your email" aria-label="Newsletter email">
+    <button>Subscribe</button>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

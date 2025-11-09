@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NewsSite — Video News</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<style>
+/* === Video Card Design (unchanged) === */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.video-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.video-card video {
+  width: 100%;
+  display: block;
+}
+
+.video-content {
+  padding: 20px;
+}
+
+.video-title {
+  font-size: 18px;
+  margin: 5px 0 10px;
+  color: #6d28d9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.video-date {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.video-desc {
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.7;
+}
+
+/* === Footer styling (same as your sample) === */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 0 30px 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #64748b;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #7c3aed;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  width: 250px;
+  font-family: "Poppins", sans-serif;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+</style>
+</head>
+
+<body>
+<header class="container header" role="banner">
+  <a href="index.html" class="brand">
+    <div class="logo">
+      <img src="logo.jpg" alt="NewsSite logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
+    </div>
+    <div>
+      <strong>NewsSite</strong>
+      <div style="font-size:12px;color:var(--muted)">Reliable news, beautifully presented</div>
+    </div>
+  </a>
+    <nav class="nav" role="navigation" aria-label="Main">
+    <a href="index.html" class="active">Home</a>
+    <a href="news.html">News</a>
+    <a href="Videonews.html">Video News</a>
+    <a href="sites.html">Famous Sites</a>
+    <a href="contact.html">Contact</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="login.html">Log In</a>
+    <label class="switch" title="Toggle dark mode">
+      <input class="theme-toggle" type="checkbox"><span class="knob"></span>
+    </label>
+  </nav>
+</header>
+<main>
+  <header style="text-align:center;margin:40px 0 30px;">
+    <h1 class="animate__animated animate__fadeInDown">Video News</h1>
+    <p>Watch the latest updates from around the world</p>
+  </header>
+
+  <section class="video-grid">
+    <div class="video-card">
+      <video controls poster="thumb1.png" src="news1.mp4"></video>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-apple-alt"></i> Apple Unveils New AI Chip for iPhone 17</div>
+        <div class="video-date">October 29, 2025</div>
+        <div class="video-desc">Apple announced its latest A19 Bionic chip, designed specifically for advanced AI processing on the iPhone 17. The new chip promises faster on-device machine learning, improved energy efficiency, and a major leap in photo and video quality.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls poster="thumb2.png" src="news2.mp4"></video>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-globe-americas"></i> UN Declares Global Climate Emergency</div>
+        <div class="video-date">October 30, 2025</div>
+        <div class="video-desc">The United Nations has officially declared a global climate emergency as rising sea levels and extreme weather threaten millions worldwide. Leaders from 150 countries have agreed to accelerate renewable energy adoption and reduce carbon emissions by 60% before 2030.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls poster="thumb3.png" src="news3.mp4"></video>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-rocket"></i> SpaceX Successfully Launches First Mars Cargo Mission</div>
+        <div class="video-date">October 31, 2025</div>
+        <div class="video-desc">SpaceX has successfully launched its first cargo mission to Mars, carrying over 50 tons of supplies, equipment, and autonomous drones. The mission marks a major milestone in Elon Musk’s long-term goal of establishing a human settlement on the Red Planet by 2030.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls poster="thumb4.png" src="news4.mp4"></video>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-chart-line"></i> Global Stock Markets Rally After Inflation Eases</div>
+        <div class="video-date">November 1, 2025</div>
+        <div class="video-desc">Global stock markets surged as new data showed inflation slowing down. Analysts predict potential rate cuts by major central banks, fueling optimism among investors.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls poster="thumb5.png" src="news5.mp4"></video>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-dna"></i> Breakthrough in Cancer Research Offers New Hope</div>
+        <div class="video-date">November 2, 2025</div>
+        <div class="video-desc">Scientists at Oxford University have developed a new gene therapy that shows remarkable success in targeting and destroying cancer cells. The treatment, currently in early trials, could revolutionize oncology.</div>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls poster="thumb6.png" src="news6.mp4"></video>
+      <div class="video-content">
+        <div class="video-title"><i class="fas fa-car-battery"></i> Electric Car Sales Reach Record High Worldwide</div>
+        <div class="video-date">November 3, 2025</div>
+        <div class="video-desc">Global sales of electric vehicles have reached an all-time high, with over 20 million units sold in 2025. Experts say the shift toward sustainable transportation is accelerating faster than expected.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 - All rights reserved for your website.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="newsletter-form">
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+  // Only one video plays at a time
+  const videos = document.querySelectorAll("video");
+  videos.forEach(video => {
+    video.addEventListener("play", () => {
+      videos.forEach(v => { if (v !== video) v.pause(); });
+    });
+  });
+</script>
+</body>
+</html>
